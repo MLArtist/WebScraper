@@ -16,3 +16,8 @@ run the script by using following command
 
 **if you wish to start the crawling afresh from the supplied address, please use following command**
 *python websitescrap.py https://www.wikipedia.org --start_afresh true*
+
+#### output
+The output will be a directory of json files, where each file contains the raw html content of webpage in the following format
+
+{"url": "raw html content of the webpage associated with URL"}
