@@ -1,5 +1,7 @@
+import argparse
 import json
 import os
+import sys
 import time
 import uuid
 from random import randint
@@ -69,6 +71,23 @@ class Websitescrap:
                 print('Processed')
 
 
-if __name__ == '__main__':
-    scrapper = Websitescrap("https://en.wikipedia.org/wiki/Python_(programming_language)", start_afresh=False)
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('website_address')
+    parser.add_argument("-s", "--start_afresh", help="whether to start a fresh crawling", default=True, action='store',
+                        dest='start_afresh')
+
+    args = parser.parse_args()
+    website = args.website_address
+    start_afresh = args.start_afresh
+
+    if not website.startswith("http"):
+        print("\033[91m {}\033[00m".format("Please include website scheme (http/https) in the provided address"))
+        return
+
+    scrapper = Websitescrap(website, start_afresh=start_afresh)
     scrapper.crawl(5, 18)
+
+
+if __name__ == '__main__':
+    main()
