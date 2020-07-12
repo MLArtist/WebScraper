@@ -28,7 +28,7 @@ class Websitescrap:
         self.url = url
         if start_afresh:
             redis.flushdb()
-            redis.sadd("new_urls", url)
+        redis.sadd("new_urls", url)
 
     def crawl(self, sleep_time_lower=30, sleep_time_upper=121):
         print("\ncrawling started\n")
@@ -71,15 +71,26 @@ class Websitescrap:
                 print('Processed')
 
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('website_address')
-    parser.add_argument("-s", "--start_afresh", help="whether to start a fresh crawling", default=True, action='store',
-                        dest='start_afresh')
+    parser.add_argument("-s", "--start_afresh", help="whether to start a fresh crawling", required=False, default=True,
+                        action='store', dest='start_afresh')
 
     args = parser.parse_args()
     website = args.website_address
-    start_afresh = args.start_afresh
+    start_afresh = str2bool(args.start_afresh)
 
     if not website.startswith("http"):
         print("\033[91m {}\033[00m".format("Please include website scheme (http/https) in the provided address"))
