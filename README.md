@@ -1,6 +1,6 @@
 #### Introduction
 This is a python based website crawling script equipped with following capabilities to trick the website robot and avoid getting blocked. 
-* Randon time intervals
+* Random time intervals
 * User-Agent switching
 * IP rotation through proxy server
 
