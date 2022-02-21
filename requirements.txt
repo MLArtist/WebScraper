@@ -8,4 +8,4 @@ redis==3.5.3
 redislite==5.0.165407
 requests==2.24.0
 soupsieve==2.0.1
-urllib3==1.26.5
+urllib3
