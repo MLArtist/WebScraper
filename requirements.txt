@@ -6,6 +6,6 @@ lxml==4.9.1
 psutil==5.7.0
 redis==4.4.4
 redislite==5.0.165407
-requests==2.24.0
+requests==2.31.0
 soupsieve==2.0.1
 urllib3
