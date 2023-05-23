@@ -1,8 +1,8 @@
 from requests.auth import HTTPProxyAuth
 
-from utils.proxy_utils.proxy import Proxy, ua
+from webscraper.utils.proxy_utils.proxy import Proxy, ua
 import requests
-import config
+from webscraper import config
 
 
 class ReqestClient(Proxy):

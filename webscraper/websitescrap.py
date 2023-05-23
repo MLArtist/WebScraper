@@ -1,7 +1,6 @@
 import argparse
 import json
 import os
-import sys
 import time
 import uuid
 from random import randint

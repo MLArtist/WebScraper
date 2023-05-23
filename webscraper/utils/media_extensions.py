@@ -1,6 +1,6 @@
 import mimetypes
 
-import config
+from webscraper import config
 
 
 def get_extensions_for_type():
