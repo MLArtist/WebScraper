@@ -1,10 +1,10 @@
 import argparse
 import json
 import os
-import sys
 import time
 import uuid
 from random import randint
+
 from utils.extract_links_from_webpage import get_links
 from utils.request_client import ReqestClient
 from utils.url_utils import get_filtered_links
@@ -47,8 +47,6 @@ class Websitescrap:
                 print('Processing %s' % url)
 
             write_count += 1
-            # if write_count > 13:
-            #     break
 
             response = request_client.request_with_proxy_header(url)
             if not response or not response.status_code == 200:

@@ -11,4 +11,5 @@ def get_extensions_for_type():
             return_list.add(ext.lower())
     return return_list
 
+
 media_extensions_list = get_extensions_for_type()

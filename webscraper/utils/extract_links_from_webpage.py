@@ -1,5 +1,6 @@
 from collections import Counter
 from bs4 import BeautifulSoup
+
 from utils.url_utils import url_split
 
 
