@@ -1,6 +1,6 @@
 from redislite import Redis
 
-from webscraper.utils.url_utils import get_filtered_links
+from utils.url_utils import get_filtered_links
 
 
 redis_client = Redis(dbfilename="./redis.db", decode_responses=True)

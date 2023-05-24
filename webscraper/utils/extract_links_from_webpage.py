@@ -1,6 +1,7 @@
 from collections import Counter
 from bs4 import BeautifulSoup
-from webscraper.utils.url_utils import url_split
+
+from utils.url_utils import url_split
 
 
 def get_links(text, website_full_url):

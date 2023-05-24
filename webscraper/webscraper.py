@@ -47,8 +47,6 @@ class Websitescrap:
                 print('Processing %s' % url)
 
             write_count += 1
-            # if write_count > 13:
-            #     break
 
             response = request_client.request_with_proxy_header(url)
             if not response or not response.status_code == 200:

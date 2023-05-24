@@ -1,6 +1,6 @@
 import mimetypes
 
-from webscraper import config
+import config
 
 
 def get_extensions_for_type():
@@ -10,5 +10,6 @@ def get_extensions_for_type():
         if mimetypes.types_map[ext].split('/')[0] in general_type:
             return_list.add(ext.lower())
     return return_list
+
 
 media_extensions_list = get_extensions_for_type()

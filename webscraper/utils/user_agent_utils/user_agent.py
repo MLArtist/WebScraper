@@ -1,7 +1,7 @@
 import json
 import os
 import random
-from webscraper import config
+import config
 
 
 class UserAgent:

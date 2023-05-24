@@ -11,11 +11,13 @@ Install the libraries provided in requirements.txt by using following command <b
 *python -m pip install -r requirements.txt*
 
 #### Running the script
-run the script by using following command <br /> 
-*python websitescrap.py https://www.wikipedia.org*
+run the script by using following command <br />
+*cd webscraper;*
+*python -m webscraper https://www.wikipedia.org*
 
-**if you wish to start the crawling afresh from the supplied address, please use following command** <br /> 
-*python websitescrap.py https://www.wikipedia.org --start_afresh true*
+**if you wish to start the crawling afresh from the supplied address, please use following command** <br />
+*cd webscraper;*
+*python -m webscraper https://www.wikipedia.org --start_afresh true*
 
 #### Output
 The output will be a number of json files (stored in /data/ directory), where each file contains the raw html content of webpage in the following format

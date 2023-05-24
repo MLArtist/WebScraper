@@ -1,6 +1,6 @@
 from urllib.parse import urlsplit
 
-from webscraper.utils.media_extensions import media_extensions_list
+from utils.media_extensions import media_extensions_list
 
 
 def url_split(url):

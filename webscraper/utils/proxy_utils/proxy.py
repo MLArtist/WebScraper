@@ -4,8 +4,8 @@ import random
 import requests
 from bs4 import BeautifulSoup
 
-from webscraper.config import HOME_DIR
-from webscraper.utils.user_agent_utils.user_agent import UserAgent
+from config import HOME_DIR
+from utils.user_agent_utils.user_agent import UserAgent
 
 ua = UserAgent()
 
