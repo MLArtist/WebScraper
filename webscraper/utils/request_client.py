@@ -22,8 +22,12 @@ class ReqestClient(Proxy):
                 # remove the invalid proxy from the proxy list and update in the file
                 self.proxy_list.remove(proxy.get("http"))
                 self.write_proxy_list()
+        else:
+            try:
+                response = requests.get(url, headers=header, timeout=20, verify=True)
+            except:
+                response = None
 
-        response = requests.get(url, headers=header, timeout=20, verify=True)
         return response
 
 
