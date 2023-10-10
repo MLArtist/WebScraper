@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webscraper:
+    image: webscraper
+    ports:
+      - "8000:8000"  # Map host port to container port (adjust as needed)
+    volumes:
+      - ./WebScraper:/app  # Mount the project directory into the container
+    working_dir: /app/webscraper
+    command: python -m webscraper https://www.wikipedia.org
+
